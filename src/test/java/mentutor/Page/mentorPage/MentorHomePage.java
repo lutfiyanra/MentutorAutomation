@@ -17,6 +17,10 @@ public class MentorHomePage {
 //    WebDriver driver = getDriver();
     PageNavigation pageNav;
 
+    public static final By IMAGE_HERO = By.xpath("//img[@alt='hero']");
+    public static final By TEXT_BESIDE_IMAGE_HERO = By.cssSelector(".font-medium.text-sm");
+    public static final By DESCRIPTION_IMAGE_HERO = By.cssSelector(".mt-2");
+
     public static final String MENTORHOMEPAGE = "https://mentutor.vercel.app/homementor";
     public static final String CREATE_TASK_PAGE = "https://mentutor.vercel.app/inputtask";
     public static final String MENTOR_FORUM_PAGE = "https://mentutor.vercel.app/forummentor";

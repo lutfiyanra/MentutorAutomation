@@ -6,6 +6,8 @@ public class MentorTaskPage {
 
 
     public static final By CREATE_TASK_HEADER = By.xpath("//h1[@class='text-putih text-lg lg:text-2xl font-medium mb-1']");
+    public static final By TITLE_BESIDE_HERO = By.cssSelector(".font-medium.text-sm");
+    public static final By DESCRIPTION_BESIDE_HERO = By.cssSelector(".mt-2");
     public static final By GIVE_TASK_TO_MENTEE= By.xpath("//p[@class='text-abu text-xs']");
     public static final By TASK_TITLE = By.xpath("//p[@class='text-putih font-normal text-base break-words']");
     public static final By TASK_TITLE_FIELD = By.cssSelector("[placeholder='task title']");
