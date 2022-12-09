@@ -31,19 +31,19 @@ Feature: Login As a Mentor
     When User input "" as eMail and "Admin123$" as password
     And User click login button
     Then User failed to login
-    And Appear email required error "email is required" message on login page
+    And Appear email required error message on login page
 
-#  Scenario: Invalid login with empty password
-#    Given User open the web page
-#    When User input "fauzan.mentor@gmail.com" as eMail and "" as password
-#    And User click login button
-#    Then User failed to login
-#    And Appear password required error message on login page
-#
-#  Scenario: Invalid login with empty email and password
-#    Given User open the web page
-#    When User input "" as eMail and "" as password
-#    And User click login button
-#    Then User failed to login
-#    And Appear email is required error message on login page
-#    And Appear password is required error message on login page
+  Scenario: Invalid login with empty password
+    Given User open the web page
+    When User input "fauzan.mentor@gmail.com" as eMail and "" as password
+    And User click login button
+    Then User failed to login
+    And Appear password required error message on login page
+
+  Scenario: Invalid login with empty email and password
+    Given User open the web page
+    When User input "" as eMail and "" as password
+    And User click login button
+    Then User failed to login
+    And Appear email is required error message on login page
+    And Appear password is required error message on login page
