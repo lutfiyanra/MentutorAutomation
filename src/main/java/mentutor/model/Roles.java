@@ -7,7 +7,7 @@ public enum Roles {
     Mentor("lutfiyanrizaamadaa@gmail.com", "TesDicoba1!", MENTOR_HOMEPAGE),
     Mentee("menteeriza@gmail.com", "TesDicoba1!", MENTEE_HOMEPAGE);
 
-    private final String username;
+    public final String username;
     private final String password;
     private final String pageURL;
 
