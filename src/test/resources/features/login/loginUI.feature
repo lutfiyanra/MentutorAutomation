@@ -26,6 +26,7 @@
       When User wait until all element successfully loaded
       Then Login Button on Login Page can be seen
 
+      @login1
     Scenario: Verify Text under login button on Login Page
       Given User open the web page
       When User wait until all element successfully loaded
