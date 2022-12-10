@@ -1,4 +1,4 @@
-@Mentor
+@Mentor @Riza
 Feature: Login As a Mentor
 
   Scenario: Valid login as Admin
@@ -9,7 +9,7 @@ Feature: Login As a Mentor
 
   Scenario: Valid login as Mentor
     Given User open the web page
-    When User input "mentor.lutfiyanra@gmail.com" as eMail and "TesDicoba1!" as password
+    When User input "fauzan.mentor@gmail.com" as eMail and "Fauzan123$!" as password
     Then User click login button
     And Click OK button
 

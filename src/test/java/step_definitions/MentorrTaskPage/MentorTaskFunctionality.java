@@ -2,7 +2,9 @@ package step_definitions.MentorrTaskPage;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import mentutor.Page.mentorPage.MentorHomePage;
 import mentutor.Page.mentorPage.MentorTaskPage;
+import org.junit.Assert;
 
 import static net.serenitybdd.core.Serenity.getDriver;
 
@@ -49,6 +51,13 @@ public class MentorTaskFunctionality {
         getDriver().findElement(MentorTaskPage.TASK_ADD_BUTTON).click();
     }
 
+    @Then("Appear Task Created PopUp Message")
+    public void appearTaskCreatedPopUpMessage() throws InterruptedException {
+        getDriver().findElement(MentorTaskPage.POPUP_VALID_INPUT).isDisplayed();
+        getDriver().findElement(MentorTaskPage.CHECKLISTMARK_VALID_INPUT).isDisplayed();
+        getDriver().findElement(MentorTaskPage.TASK_CREATED).isDisplayed();
+        Thread.sleep(3000);
+    }
     @Then("Appear Invalid Input From Client Error Message")
     public void appearInvalidInputFromClientErrorMessage() {
         getDriver().findElement(MentorTaskPage.POPUP_INVALID_INPUT).isDisplayed();
@@ -56,10 +65,18 @@ public class MentorTaskFunctionality {
         getDriver().findElement(MentorTaskPage.ERROR_INVALID_INPUT).isDisplayed();
     }
 
-    @And("The new task with empty input on Title field can not be created")
-    public void theNewTaskWithEmptyInputOnTitleFieldCanNotBeCreated() throws InterruptedException {
+    @And("The new task successfully created")
+    public void theNewTaskSuccessfullyCreated() throws InterruptedException {
+        getDriver().findElement(MentorTaskPage.OK_BUTTON_ON_VALID_INPUT_POPUP).isDisplayed();
+        getDriver().findElement(MentorTaskPage.OK_BUTTON_ON_VALID_INPUT_POPUP).click();
+        Thread.sleep(5000);
+    }
+
+    @And("The new task can not be created")
+    public void theNewTaskCanNotBeCreated() throws InterruptedException {
         getDriver().findElement(MentorTaskPage.OK_BUTTON_ON_INVALID_INPUT_POPUP).isDisplayed();
         getDriver().findElement(MentorTaskPage.OK_BUTTON_ON_INVALID_INPUT_POPUP).click();
+        Assert.assertEquals(MentorHomePage.CREATE_TASK_PAGE, getDriver().getCurrentUrl());
         Thread.sleep(5000);
     }
 
@@ -74,6 +91,19 @@ public class MentorTaskFunctionality {
     public void theNewTaskWithEmptyInputOnDueDateFieldCanNotBeCreated() throws InterruptedException {
         getDriver().findElement(MentorTaskPage.OK_BUTTON_ON_INVALID_INPUT_POPUP).isDisplayed();
         getDriver().findElement(MentorTaskPage.OK_BUTTON_ON_INVALID_INPUT_POPUP).click();
+        Thread.sleep(5000);
+    }
+
+    @And("User input document attachment")
+    public void userInputFileAttachment() throws InterruptedException {
+        getDriver().findElement(MentorTaskPage.CHOOSE_FILE_ATTACHMENT).sendKeys(MentorTaskPage.DOCUMENT_ATTACHMENT+"/angsuran.pdf");
+        Thread.sleep(5000);
+        //getDriver().findElement(MentorProfilePage.BUTTON_UPLOAD_IMAGE).sendkeys(MentorProfilePage.IMAGE_ATTACHMENT+"/imagestests.jpg");
+    }
+
+    @And("User input image attachment")
+    public void userInputImageAttachment() throws InterruptedException {
+        getDriver().findElement(MentorTaskPage.CHOOSE_IMAGE_ATTACHMENT).sendKeys(MentorTaskPage.IMAGE_ATTACHMENT+"/serenityyy.png");
         Thread.sleep(5000);
     }
 }

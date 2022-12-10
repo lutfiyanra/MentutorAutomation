@@ -1,4 +1,4 @@
-@Mentor
+@Mentor @Riza
   Feature: Mentor Task Page Functionality
 
     Background: User already login as mentor
@@ -41,4 +41,3 @@
     Scenario: Verify mentor Add Task Button
       When User wait until all element successfully loaded
       Then Mentor Add Task Button can be seen
-

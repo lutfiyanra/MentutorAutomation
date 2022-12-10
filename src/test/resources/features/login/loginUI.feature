@@ -1,4 +1,4 @@
-@Mentor
+@Mentor @Riza
   Feature: Login UI Testing
 
     Scenario: Verify Image on Login Page

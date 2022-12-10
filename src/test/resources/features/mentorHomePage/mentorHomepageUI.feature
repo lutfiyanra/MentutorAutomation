@@ -1,4 +1,4 @@
-@Mentor
+@Mentor @Riza
   Feature: UI Test on Mentor Homepage
 
     Background: User already login as mentor

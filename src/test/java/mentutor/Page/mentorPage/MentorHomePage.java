@@ -45,12 +45,6 @@ public class MentorHomePage {
         getDriver().findElement(MENTOR_TASK_NAV).isDisplayed();
         getDriver().findElement(MENTOR_FORUM_NAV).isDisplayed();
         getDriver().findElement(MENTOR_PROFILE_NAV).isDisplayed();
-//        driver.findElement(MENTOR_TASK_NAV).isDisplayed();
-//        driver.findElement(MENTOR_FORUM_NAV).isDisplayed();
-//        driver.findElement(MENTOR_PROFILE_NAV).isDisplayed();
-//        driver.findElement(PROFILE_NAME).isDisplayed();
-//        driver.findElement(PROFILE_ROLE).isDisplayed();
-//        driver.findElement(MENTOR_VIEW_ALL_TASK).isDisplayed();
     }
 
 
