@@ -1,4 +1,4 @@
-@Mentor @Riza @Capstone4
+@Capstone4 @Mentor @Riza
   Feature: Login UI Testing
 
     Scenario: Verify Image on Login Page

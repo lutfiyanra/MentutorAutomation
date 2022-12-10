@@ -1,4 +1,4 @@
-@Mentor @Riza @Capstone4
+@Capstone4 @Mentor @Riza
 Feature: Login As a Mentor Functionality
 
   Scenario: Valid login as Admin

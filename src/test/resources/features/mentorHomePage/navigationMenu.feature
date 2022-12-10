@@ -1,4 +1,4 @@
-@Mentor @Riza @Capstone4
+@Capstone4 @Mentor @Riza
 Feature: Mentor Home Page Navigation Functionality
 
   Background: User already login as mentor
