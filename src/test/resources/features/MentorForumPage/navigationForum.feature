@@ -1,5 +1,6 @@
-@Mentor
+@Capstone4 @mentor @rimasya
 Feature: Mentor Forum Page Navigation Functionality
+
 
   Background: User already login as mentor
     Given User login as mentor
@@ -42,7 +43,15 @@ Feature: Mentor Forum Page Navigation Functionality
 
   Scenario: Verify button load more comment on card forum
     Given User already on mentor forum page
-    And Displayed comment content on card forum
+    And Displayed button load more comment on card forum
+
+  Scenario: Verify button hide on card forum
+    Given User already on mentor forum page
+    And Displayed button hide on card forum
+ @TEST1
+  Scenario: Verify button send comment on card forum
+    Given User already on mentor forum page
+    And Displayed button send comment on card forum
 
 
 

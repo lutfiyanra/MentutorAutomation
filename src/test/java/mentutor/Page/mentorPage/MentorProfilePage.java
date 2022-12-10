@@ -1,6 +1,11 @@
 package mentutor.Page.mentorPage;
 
+import io.appium.java_client.AppiumBy;
+import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.Steps;
 import org.openqa.selenium.By;
+
+import static net.serenitybdd.core.Serenity.getDriver;
 
 public class MentorProfilePage {
 
@@ -16,9 +21,27 @@ public class MentorProfilePage {
     public static final By EDIT_EMAIL = By.id("input-email");
     public static final By EDIT_PASSWORD = By.id("input-password");
     public static final By PROFILE_SUBMIT_BUTTON = By.id("btn-submitMentee");
-    public static final By UPLOAD_BUTTON = By.id(("btn-upload-gbr"));
+    public static final By UPLOAD_BUTTON = By.cssSelector(("#btn-upload-gbr"));
     public static final By IMAGE_PROFILE = By.xpath("//div[@class='flex flex-col lg:flex-row  justify-center items-center sm:flex-auto']/img[@src='/assets/toys-3.5453ac10.png']");
     public static final By HEADER_PROFILE = By.xpath("//h1[@class='text-putih text-lg lg:text-2xl font-medium mb-2']");
+    public static final By POPUP_CARD_SUCCESS = By.xpath("//div[@class='swal2-popup swal2-modal swal2-icon-success swal2-show']");
+    public static final By POPUP_TITLE_SUCCESS = By.id("swal2-title");
+    public static final By POPUP_ICON_SUCCESS= By.xpath("//div[@class='swal2-success-ring']");
+    public static final By POPUP_BUTTON_OK =By.xpath("//button[@class='swal2-confirm swal2-styled']");
+    public static final By POPUP_CARD_FAILED = By.xpath("//div[@class='swal2-popup swal2-modal swal2-icon-error swal2-show']");
+    public static final By POPUP_TITLE_FAILED = By.cssSelector(".swal2-title");
+    public static final By POPUP_ICON_FAILED = By.xpath("//span[@class='swal2-x-mark']");
 
+    public static final String DIR = System.getProperty("user.dir");
+    public static final String DOCUMENT_ATTACHMENT = DIR+"/src/test/resources/attachments/documents";
+    public static final String IMAGE_ATTACHMENT = DIR+"/src/test/resources/attachments/images";
+
+
+    @Step("Update image profile on profile page")
+    public void setUpdateImageProfileOnProfilePage(String filename){
+        getDriver().findElement(MentorProfilePage.PROFILE_SUBMIT_BUTTON).click();
+
+
+    }
 
 }

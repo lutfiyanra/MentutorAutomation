@@ -1,5 +1,6 @@
-@Mentor
+@Capstone4 @mentor @rimasya
 Feature: Mentor Profile Page Navigation Functionality
+
 
   Background: User already login as mentor
     Given User login as mentor

@@ -23,74 +23,79 @@ public class MentorProfilePageStepDefs {
         getDriver().findElement(MentorHomePage.MENTOR_PROFILE_NAV).isDisplayed();
     }
     @And("Displayed title profile page")
-    public void displayedTitleProfilePage() {
+    public void displayedTitleProfilePage() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.HEADER_PROFILE).isDisplayed();
+        Thread.sleep(2000);
     }
 
     @Given("User already on mentor profile page")
     public void userAlreadyOnMentorProfilePage() {
         getDriver().findElement(MentorProfilePage.PROFILE_ICON).click();
-        getDriver().manage().timeouts().implicitlyWait((Duration.ofSeconds(5)));
         Assert.assertEquals(MentorHomePage.MENTOR_PROFILE_PAGE,getDriver().getCurrentUrl());
     }
     @And("from profile displays the name")
-    public void fromProfileDisplaysTheName() {
+    public void fromProfileDisplaysTheName() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.PROFILE_NAME).isDisplayed();
-        getDriver().manage().timeouts().implicitlyWait((Duration.ofSeconds(5)));
+        Thread.sleep(2000);
     }
     @And("from profile displays the role")
-    public void fromProfileDisplaysTheRole() {
+    public void fromProfileDisplaysTheRole() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.PROFILENAME_ROLE).isDisplayed();
+        Thread.sleep(2000);
     }
     @Then("from profile displays the class")
-    public void fromProfileDisplaysTheClass() {
+    public void fromProfileDisplaysTheClass() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.PROFILE_CLASS).isDisplayed();
-        getDriver().manage().timeouts().implicitlyWait((Duration.ofSeconds(5)));
+        Thread.sleep(2000);
     }
-
     @And("User click icon pen on card detail profile")
     public void userClickIconPenOnCardDetailProfile() {
         getDriver().findElement(MentorProfilePage.EDIT_ICON).click();
-        getDriver().manage().timeouts().implicitlyWait((Duration.ofSeconds(5)));
     }
     @And("Displayed on edit profile card")
-    public void displayedOnEditProfileCard() {
+    public void displayedOnEditProfileCard() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.PROFILE_EDIT).isDisplayed();
-        getDriver().manage().timeouts().implicitlyWait((Duration.ofSeconds(5)));
+        Thread.sleep(2000);
     }
-
     @Given("Already on edit profile card")
-    public void alreadyOnEditProfileCard() {
+    public void alreadyOnEditProfileCard() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.PROFILE_ICON).click();
         getDriver().findElement(MentorProfilePage.PROFILE_EDIT).isDisplayed();
+        Thread.sleep(2000);
     }
     @And("verify name on edit profile card")
-    public void verifyNameOnEditProfileCard() {
+    public void verifyNameOnEditProfileCard() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.EDIT_NAME).isDisplayed();
+        Thread.sleep(2000);
     }
 
     @And("verify email on edit profile card")
-    public void verifyEmailOnEditProfileCard() {
+    public void verifyEmailOnEditProfileCard() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.EDIT_EMAIL).isDisplayed();
+        Thread.sleep(2000);
     }
 
     @And("verify password on edit profile card")
-    public void verifyPasswordOnEditProfileCard() {
+    public void verifyPasswordOnEditProfileCard() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.EDIT_PASSWORD).isDisplayed();
+        Thread.sleep(2000);
     }
 
     @And("verify images on edit profile card")
-    public void verifyImagesOnEditProfileCard() {
+    public void verifyImagesOnEditProfileCard() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.IMAGE_PROFILE).isDisplayed();
+        Thread.sleep(2000);
     }
 
     @And("verify button upload on edit profile card")
-    public void verifyButtonUploadOnEditProfileCard() {
+    public void verifyButtonUploadOnEditProfileCard() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.UPLOAD_BUTTON).isDisplayed();
+        Thread.sleep(2000);
     }
 
     @And("verify button submit on edit profile card")
-    public void verifyButtonSubmitOnEditProfileCard() {
+    public void verifyButtonSubmitOnEditProfileCard() throws InterruptedException {
         getDriver().findElement(MentorProfilePage.PROFILE_SUBMIT_BUTTON).isDisplayed();
+        Thread.sleep(2000);
     }
 }

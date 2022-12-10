@@ -13,14 +13,18 @@ public class MentorForumPage {
     public static final By COMMENT_FIELD = By.id("Input-comment");
     public static final By SHOWCOMMNET_BUTTON = By.id("btn-showcomments");
     public static final By HIDE_BUTTON = By.id("btn-hidecomments");
-    public static final By FORUM_SUBMIT_BUTTON = By.id("btn-sendComment");
+    public static final By FORUM_SUBMIT_BUTTON = By.xpath("//div[@class='mt-[3rem] mb-[2rem] space-y-6']/div[1]//button[@id='btn-sendComment']");
     public static final By FORUM_CARD1 = By.cssSelector(".space-y-6 > div:nth-of-type(1)");
     public static final By FORUM_CARD2 = By.cssSelector(".space-y-6 > div:nth-of-type(2)");
     public static final By FORUM_CARD3 = By.cssSelector(".space-y-6 > div:nth-of-type(3)");
     public static final By IMAGE_PROFILE_CARD =By.xpath("//div[@class='mt-[3rem] mb-[2rem] space-y-6']/div[1]//img[@src='/assets/toys-2.1898dd97.png']");
     public static final By NAME_ROLE_FORUMCARD = By.xpath("//div[@class='mt-[3rem] mb-[2rem] space-y-6']/div[1]//p[@class='text-abu font-normal text-xs']");
     public static final By DESCRIPTION_TITLE_FORUM = By.xpath("//p[@class='text-abu font-light text-[8px] md:text-sm']");
-    public static final By NAME_FORUM =By.xpath("//h3[.='Forum']");
+    public static final By ICON_FORUM =By.xpath("//h3[.='Forum']");
     public static final By CONTENT_COMMENT = By.cssSelector(".space-y-6 > div:nth-of-type(1) > .text-abu");
+    public static final By IMAGE_DETAIL_PROFILE_COMMENT = By.xpath("//div[@class='mt-[3rem] mb-[2rem] space-y-6']/div[1]/div[2]//img[@src='/assets/toys-3.5453ac10.png']");
+    public static final By NAME_DETAIL_PROFILE_COMMENT =By.cssSelector(".space-y-6 > div:nth-of-type(1) > div:nth-of-type(2) .text-putih");
+    public static final By ROLE_DETAIL_PROFILE_COMMENT = By.xpath("//div[@class='mt-[3rem] mb-[2rem] space-y-6']/div[1]/div[2]//p[@class='text-abu capitalize font-normal text-xs']");
+    public static final By CONTENT_PROFILE_COMMENT = By.cssSelector(".space-y-6 > div:nth-of-type(1) > div:nth-of-type(2) > .text-sm");
 
 }
