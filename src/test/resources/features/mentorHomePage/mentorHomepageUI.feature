@@ -16,3 +16,23 @@
       Scenario: Verify Description text beside image hero on mentor homepage
         When User wait until all element successfully loaded
         Then Description text beside image hero on mentor homepage can be seen
+
+      Scenario: Verify name of mentor logged in displayed
+        When User wait until all element successfully loaded
+        Then Name of mentor displayed
+
+      Scenario: Verify role of user logged in is displayed
+        When User wait until all element successfully loaded
+        Then Role of user displayed
+
+      Scenario: Verify view all task on mentor homepage
+        When User wait until all element successfully loaded
+        Then View all task on mentor homepage is displayed
+
+      Scenario: Verify Your created task title on mentor homepage
+        When User wait until all element successfully loaded
+        Then Your created task title on mentor homepage is displayed
+
+      Scenario: Verify single list of task created on mentor homepage
+        When User wait until all element successfully loaded
+        Then Single list of task created on mentor homepage is displayed

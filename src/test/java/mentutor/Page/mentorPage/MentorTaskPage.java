@@ -20,7 +20,9 @@ public class MentorTaskPage {
     public static final By TASK_IMAGE = By.xpath("//p[.='Images']");
     public static final By TASK_IMAGE_BUTTON = By.xpath("//input[@id='uploadimage-btn']");
     public static final By TASK_ADD_BUTTON = By.xpath("//button[@id='input-file']");
+    public static final By POPUP_INVALID_INPUT = By.cssSelector(".swal2-popup");
+    public static final By CLOSEMARK_INVALID_INPUT = By.cssSelector(".swal2-x-mark");
+    public static final By ERROR_INVALID_INPUT = By.cssSelector(".swal2-title");
+    public static final By OK_BUTTON_ON_INVALID_INPUT_POPUP = By.cssSelector(".swal2-confirm");
+    }
 
-
-
-}

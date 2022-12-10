@@ -22,4 +22,19 @@ public class MentorHomepageUIStepDefs {
     public void descriptionTextBesideImageHeroOnMentorHomepageCanBeSeen() {
         getDriver().findElement(MentorHomePage.DESCRIPTION_IMAGE_HERO).isDisplayed();
     }
+
+    @Then("View all task on mentor homepage is displayed")
+    public void viewAllTaskOnMentorHomepageIsDisplayed() {
+        getDriver().findElement(MentorHomePage.MENTOR_VIEW_ALL_TASK).isDisplayed();
+    }
+
+    @Then("Your created task title on mentor homepage is displayed")
+    public void yourCreatedTaskTitleOnMentorHomepageIsDisplayed() {
+        getDriver().findElement(MentorHomePage.YOUR_CREATED_TASK).isDisplayed();
+    }
+
+    @Then("Single list of task created on mentor homepage is displayed")
+    public void singleListOfTaskCreatedOnMentorHomepageIsDisplayed() {
+        getDriver().findElement(MentorHomePage.SINGLE_TASK_CARD_CREATED).isDisplayed();
+    }
 }
