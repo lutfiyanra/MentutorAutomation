@@ -1,4 +1,4 @@
-@Mentor @Riza
+@Mentor @Riza @Capstone4
 Feature: Delete Task Functionality for Mentor role
 
   Background: User already login as mentor

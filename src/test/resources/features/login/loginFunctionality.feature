@@ -1,5 +1,5 @@
-@Mentor @Riza
-Feature: Login As a Mentor
+@Mentor @Riza @Capstone4
+Feature: Login As a Mentor Functionality
 
   Scenario: Valid login as Admin
     Given User open the web page

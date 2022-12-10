@@ -1,4 +1,4 @@
-@Mentor @Riza
+@Mentor @Riza @Capstone4
   Feature: UI Test on Mentor Homepage
 
     Background: User already login as mentor

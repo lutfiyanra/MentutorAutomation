@@ -1,5 +1,5 @@
-@Mentor @Riza
-  Feature: Mentor Task Page Functionality
+@Mentor @Riza @Capstone4
+  Feature: Mentor Task Page UI Testing
 
     Background: User already login as mentor
       Given User login as mentor

@@ -1,5 +1,5 @@
-@Mentor @Riza
-Feature: Task Functionality for Mentor role
+@Mentor @Riza @Capstone4
+Feature: Create Task Functionality for Mentor role
 
   Background: User already login as mentor
     Given User login as mentor
