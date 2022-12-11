@@ -1,5 +1,5 @@
-@Mentor
-Feature: Login As a Mentor
+@Capstone4 @Mentor @Riza
+Feature: Login As a Mentor Functionality
 
   Scenario: Valid login as Admin
     Given User open the web page
@@ -9,7 +9,7 @@ Feature: Login As a Mentor
 
   Scenario: Valid login as Mentor
     Given User open the web page
-    When User input "mentor.lutfiyanra@gmail.com" as eMail and "TesDicoba1!" as password
+    When User input "fauzan.mentor@gmail.com" as eMail and "Fauzan123$!" as password
     Then User click login button
     And Click OK button
 
@@ -31,19 +31,19 @@ Feature: Login As a Mentor
     When User input "" as eMail and "Admin123$" as password
     And User click login button
     Then User failed to login
-    And Appear email required error "email is required" message on login page
+    And Appear email required error message on login page
 
-#  Scenario: Invalid login with empty password
-#    Given User open the web page
-#    When User input "fauzan.mentor@gmail.com" as eMail and "" as password
-#    And User click login button
-#    Then User failed to login
-#    And Appear password required error message on login page
-#
-#  Scenario: Invalid login with empty email and password
-#    Given User open the web page
-#    When User input "" as eMail and "" as password
-#    And User click login button
-#    Then User failed to login
-#    And Appear email is required error message on login page
-#    And Appear password is required error message on login page
+  Scenario: Invalid login with empty password
+    Given User open the web page
+    When User input "fauzan.mentor@gmail.com" as eMail and "" as password
+    And User click login button
+    Then User failed to login
+    And Appear password required error message on login page
+
+  Scenario: Invalid login with empty email and password
+    Given User open the web page
+    When User input "" as eMail and "" as password
+    And User click login button
+    Then User failed to login
+    And Appear email is required error message on login page
+    And Appear password is required error message on login page

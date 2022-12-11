@@ -22,10 +22,10 @@ public class MentorNavMenuStepDefs {
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @Then("All menu of mentor homepage is displayed")
-    public void allMenuOfMentorHomepageIsDisplayed() {
-        getDriver().findElement(MentorHomePage.MENTOR_HOME_NAV).isDisplayed();
-    }
+//    @Then("All menu of mentor homepage is displayed")
+//    public void allMenuOfMentorHomepageIsDisplayed() {
+//        getDriver().findElement(MentorHomePage.MENTOR_HOME_NAV).isDisplayed();
+//    }
 
     @Then("Name of mentor displayed")
     public void nameOfMentorDisplayed() {
@@ -84,4 +84,6 @@ public class MentorNavMenuStepDefs {
 //        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }
+
+
 }
