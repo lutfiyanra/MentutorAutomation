@@ -80,6 +80,7 @@ public class LoginSteps {
         new WebDriverWait(getDriver(), Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfElementLocated(LoginPage.OK_BUTTON_LOGIN));
         getDriver().findElement(LoginPage.OK_BUTTON_LOGIN).click();
         Assert.assertEquals(MentorHomePage.MENTORHOMEPAGE, getDriver().getCurrentUrl());
+        Thread.sleep(5000);
     }
 
     @Then("User failed to login")
@@ -95,16 +96,68 @@ public class LoginSteps {
         getDriver().findElement(LoginPage.ERROR_LOGIN).click();
     }
 
-    @And("Appear email required error {string} message on login page")
-    public void appearEmailErrorMessageOnLoginPage(By emailRequired) {
+    @And("Appear email required error message on login page")
+    public void appearEmailErrorMessageOnLoginPage() throws InterruptedException {
 //        Assert.assertEquals(LoginPage.ERROR_EMAIL_REQUIRED, getDriver().get(emailRequired));
-        Assert.assertEquals(LoginPage.LOGIN_URL, getDriver().getCurrentUrl());
-        assertTrue(loginPage.isEmailEmpty());
+//        Assert.assertEquals(LoginPage.LOGIN_URL, getDriver().getCurrentUrl());
+        getDriver().findElement(LoginPage.ERROR_EMAIL_REQUIRED).isDisplayed();
+        Thread.sleep(3000);
 //        Assert.assertEquals(LoginPage.ERROR_EMAIL_REQUIRED, getDriver().findElement(LoginPage.ERROR_EMAIL_REQUIRED));
-        new WebDriverWait(getDriver(), Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfElementLocated(LoginPage.ERROR_EMAIL_REQUIRED));
+//        new WebDriverWait(getDriver(), Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfElementLocated(LoginPage.ERROR_EMAIL_REQUIRED));
 //        Assertions.assertEquals("Email is required", getDriver().findElements(LoginPage.ERROR_EMAIL_REQUIRED));
     }
 
+=======
+    @And("Appear password required error message on login page")
+    public void appearPasswordRequiredErrorMessageOnLoginPage() throws InterruptedException {
+        getDriver().findElement(LoginPage.ERROR_PASSWORD_REQUIRED).isDisplayed();
+        Thread.sleep(3000);
+    }
+
+    @And("Appear email is required error message on login page")
+    public void appearEmailIsRequiredErrorMessageOnLoginPage() {
+        getDriver().findElement(LoginPage.ERROR_EMAIL_REQUIRED).isDisplayed();
+    }
+
+    @And("Appear password is required error message on login page")
+    public void appearPasswordIsRequiredErrorMessageOnLoginPage() throws InterruptedException {
+        getDriver().findElement(LoginPage.ERROR_PASSWORD_REQUIRED).isDisplayed();
+        Thread.sleep(3000);
+    }
+
+    @Then("Login to your account text title can be seen")
+    public void loginToYourAccountTextTitleCanBeSeen() {
+        getDriver().findElement(LoginPage.LOGIN_TITLE_PAGE).isDisplayed();
+    }
+
+    @Then("Email title and Email field can be seen")
+    public void emailTitleAndEmailFieldCanBeSeen() {
+        getDriver().findElement(LoginPage.EMAIL_TITLE_PAGE).isDisplayed();
+        getDriver().findElement(LoginPage.EMAIL_FIELD).isDisplayed();
+    }
+
+    @Then("Password title and Password field can be seen")
+    public void passwordTitleAndPasswordFieldCanBeSeen() {
+        getDriver().findElement(LoginPage.PASSWORD_TITLE_PAGE).isDisplayed();
+        getDriver().findElement(LoginPage.PASSWORD_FIELD).isDisplayed();
+    }
+
+    @Then("Login Button on Login Page can be seen")
+    public void loginButtonOnLoginPageCanBeSeen() {
+        getDriver().findElement(LoginPage.LOGIN_BTN).isDisplayed();
+    }
+
+    @Then("Text under Login Button can be seen")
+    public void textUnderLoginButtonCanBeSeen() {
+        getDriver().findElement(LoginPage.TEXT_UNDER_LOGIN_BUTTON).isDisplayed();
+    }
+
+    @Then("Image on Login Page can be seen")
+    public void imageOnLoginPageCanBeSeen() {
+        getDriver().findElement(LoginPage.LOGIN_IMAGE).isDisplayed();
+    }
+    
+    <<<<<<< rezkiadina-project
     @Given("User login as mentee")
     public void userLoginAsMentee() {
         getDriver().get(LoginPage.LOGIN_URL);
@@ -119,6 +172,5 @@ public class LoginSteps {
         getDriver().findElement(LoginPage.OK_BUTTON_LOGIN).click();
         Assert.assertEquals(MenteeHomePage.MENTEE_HOME_PAGE, getDriver().getCurrentUrl());
     }
-
-
+    
 }
