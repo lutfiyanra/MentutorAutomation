@@ -4,8 +4,11 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
 
-//@RunWith(Cucumber.class)
+
+
+
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         tags = "@Capstone4",

@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import mentutor.Page.LoginPage;
+import mentutor.Page.menteePage.MenteeHomePage;
 import mentutor.Page.mentorPage.MentorHomePage;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Assert;
@@ -106,6 +107,7 @@ public class LoginSteps {
 //        Assertions.assertEquals("Email is required", getDriver().findElements(LoginPage.ERROR_EMAIL_REQUIRED));
     }
 
+=======
     @And("Appear password required error message on login page")
     public void appearPasswordRequiredErrorMessageOnLoginPage() throws InterruptedException {
         getDriver().findElement(LoginPage.ERROR_PASSWORD_REQUIRED).isDisplayed();
@@ -154,4 +156,21 @@ public class LoginSteps {
     public void imageOnLoginPageCanBeSeen() {
         getDriver().findElement(LoginPage.LOGIN_IMAGE).isDisplayed();
     }
+    
+    <<<<<<< rezkiadina-project
+    @Given("User login as mentee")
+    public void userLoginAsMentee() {
+        getDriver().get(LoginPage.LOGIN_URL);
+        getDriver().findElement(LoginPage.EMAIL_FIELD).sendKeys("dara.mentee@gmail.com");
+        getDriver().findElement(LoginPage.PASSWORD_FIELD).sendKeys("Nafisa123$");
+        getDriver().findElement(LoginPage.LOGIN_BTN).click();
+    }
+
+    @And("User logged in as mentee")
+    public void userLoggedInAsMentee() {
+        new WebDriverWait(getDriver(), Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfElementLocated(LoginPage.OK_BUTTON_LOGIN));
+        getDriver().findElement(LoginPage.OK_BUTTON_LOGIN).click();
+        Assert.assertEquals(MenteeHomePage.MENTEE_HOME_PAGE, getDriver().getCurrentUrl());
+    }
+    
 }
