@@ -23,6 +23,7 @@
       <version>${serenity.version}</version>
       <scope>test</scope>
     </dependency>
+<!--    <testFailureIgnore>true</testFailureIgnore>-->
     <dependency>
       <groupId>net.serenity-bdd</groupId>
       <artifactId>serenity-cucumber</artifactId>
