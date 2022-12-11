@@ -6,7 +6,7 @@
   <p align="center">
     Capstone Program Immersive Alterra Academy
     <br />
-    <a href="https://www.figma.com/file/FS9o3dSTRtTSmgwB834nbk/Bengcall-Design?node-id=1%3A144"><strong>| MENTUTOR |</strong></a>
+    <a href="[https://www.figma.com/file/FS9o3dSTRtTSmgwB834nbk/Bengcall-Design?node-id=1%3A144](https://www.figma.com/file/UtlMuFvJy2Uhm0RTQqlTYz/Design-Mentutor-App?node-id=116%3A142)"><strong>| MENTUTOR |</strong></a>
     <br />
     <br />
   </p>
@@ -14,10 +14,10 @@
 
 ## 📑 About the Project
 
-<p align="justify">Mentutor is the app which attend the Intents Meeting of Mantee and Mentor to discuss and monitor their performance </p>
+<p align="justify">Mentutor is the app that exclusively crafted by developer which attend the Intents Meeting of Mantee and Mentor to interact using Forum Feature and monitor on mentee performance. Mentor also can add task and gives mark on mentee's submission. This app is exclusively created because only admin can add user, both as mentor or mentee. </p>
 
 ## 📓 Testing Documentation
-[Test Case For WebUI](https://docs.google.com/spreadsheets/d/1O6KXBNgfuOaJJmRbachmq_b3TQBppHi5DMILPnsZIZk/edit?pli=1#gid=1278518793)
+[Test Case For WebUI and Web Functionality]([https://docs.google.com/spreadsheets/d/1O6KXBNgfuOaJJmRbachmq_b3TQBppHi5DMILPnsZIZk/edit?pli=1#gid=1278518793](https://docs.google.com/spreadsheets/d/1HwsB1PjvAmzrkro8DRu2ygstlXefawPhm2WGB31lrY8/edit?usp=sharing))
 
 <!--
 ## 📝 Reports
@@ -53,7 +53,7 @@
 **Communication:**  
 
 ![GitHub](https://img.shields.io/badge/github%20Project-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)
+![Google Meet](#)
 
 
 ## 📱 Our teams
